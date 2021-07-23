@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered">Rock Paper Scissors</p>
+                        </header>
+                        <div class="card-content is-half column is-offset-4">
+                            <h1 class="title is-1 ml-5 ">0 to 0</h1>
+                            <label class="is-size-3" for="numRounds">Play upto:</label>
+                            <div class="select is-rounded is-info">
+                                <select name="numRounds" id="numRounds">
+                                    <option value="3">3</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <footer class="card-footer column is-offset-one-quarter">
+                            <button id="playerTwo" class="button is-link">Player One</button>
+                            <button id="playerTwo" class="button is-primary">Player Two</button>
+                            <button id="reset" class="button is-danger">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
