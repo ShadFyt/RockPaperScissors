@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column"></div>
-                <div class="column is-half">
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered">Rock Paper Scissors</p>
-                        </header>
-                        <div class="card-content is-half column is-offset-4">
-                            <h1 class="title is-1 ml-5 ">0 to 0</h1>
-                            <label class="is-size-3" for="numRounds">Play upto:</label>
-                            <div class="select is-rounded is-info">
-                                <select name="numRounds" id="numRounds">
-                                    <option value="3">3</option>
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <footer class="card-footer column is-offset-one-quarter">
-                            <button id="playerTwo" class="button is-link">Player One</button>
-                            <button id="playerTwo" class="button is-primary">Player Two</button>
-                            <button id="reset" class="button is-danger">Reset</button>
-                        </footer>
-                    </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column is-half">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title is-centered">Rock Paper Scissors</p>
+              </header>
+              <div class="card-content is-half column is-offset-4">
+                <h1 id="scoreboard" class="title is-1 ml-5">
+                  <span class="player">0</span> to
+                  <span class="opponent">0</span>
+                </h1>
+                <label class="is-size-3" for="numRounds">Play upto:</label>
+                <div class="select is-rounded is-info">
+                  <select name="numRounds" id="numRounds">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                  </select>
                 </div>
-                <div class="column"></div>
+              </div>
+              <footer id="options" class="card-footer column is-offset-4">
+                <button id="rock" class="button is-link">Rock</button>
+                <button id="paper" class="button is-primary">Paper</button>
+                <button id="scissor" class="button is-danger">Scissor</button>
+              </footer>
             </div>
+          </div>
+          <div class="column"></div>
         </div>
+      </div>
     </section>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
