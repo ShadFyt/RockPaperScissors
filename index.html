@@ -14,34 +14,63 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column"></div>
-          <div class="column is-half">
+          <div class="column is-half is-offset-one-quarter">
             <div class="card">
               <header class="card-header">
                 <p class="card-header-title is-centered">Rock Paper Scissors</p>
               </header>
-              <div class="card-content is-half column is-offset-4">
-                <h1 id="scoreboard" class="title is-1 ml-5">
-                  <span class="player">0</span> to
-                  <span class="opponent">0</span>
-                </h1>
-                <label class="is-size-3" for="numRounds">Play upto:</label>
-                <div class="select is-rounded is-info">
-                  <select name="numRounds" id="numRounds">
-                    <option value="3">3</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                  </select>
+              <div class="columns">
+                <div
+                  class="
+                    column
+                    is-flex
+                    is-align-items-center
+                    is-justify-content-center
+                    is-size-3
+                  "
+                >
+                  Ryan
+                </div>
+                <div class="column is-half">
+                  <div class="card-content is-half">
+                    <h1 id="scoreboard" class="title is-1 ml-5">
+                      <span class="player">0</span> to
+                      <span class="opponent">0</span>
+                    </h1>
+                    <label class="is-size-3" for="numRounds">Play upto:</label>
+                    <div class="select is-rounded is-info">
+                      <select name="numRounds" id="numRounds">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="
+                    column
+                    is-one-quarter
+                    is-flex
+                    is-align-items-center
+                    is-justify-content-center
+                    is-size-3
+                  "
+                >
+                  Opponent
                 </div>
               </div>
-              <footer id="options" class="card-footer column is-offset-4">
+
+              <footer
+                id="options"
+                class="card-footer is-justify-content-center"
+              >
                 <button id="rock" class="button is-link">Rock</button>
                 <button id="paper" class="button is-primary">Paper</button>
                 <button id="scissor" class="button is-danger">Scissor</button>
               </footer>
             </div>
           </div>
-          <div class="column"></div>
         </div>
       </div>
     </section>
