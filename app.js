@@ -1,6 +1,6 @@
 const scoreboard = document.querySelector("#scoreboard");
 const numRounds = document.querySelector("#numRounds");
-let rounds = numRounds.value;
+let rounds = parseInt(numRounds.value);
 
 const selections = {
   rock: {
@@ -51,10 +51,18 @@ player.options.addEventListener("click", function (e) {
   if (e.target.id != "options") {
     opponent.choice();
     selections.compare(e.target.id, opponent.option);
+    if (
+      parseInt(player.score.innerText) === rounds ||
+      parseInt(opponent.score.innerText) === rounds
+    ) {
+      for (btn of player.options.children) {
+        btn.disabled = true;
+      }
+    }
   }
 });
 
 numRounds.addEventListener("change", function (e) {
   console.log(e);
-  rounds = e.target.value;
+  rounds = parseInt(e.target.value);
 });
