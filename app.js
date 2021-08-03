@@ -47,6 +47,13 @@ const opponent = {
   },
 };
 
+function reset() {
+  for (btn of player.options.children) {
+    btn.disabled = false;
+  }
+  player.score.innerText = opponent.score.innerText = 0;
+}
+
 player.options.addEventListener("click", function (e) {
   if (e.target.id != "options") {
     opponent.choice();
@@ -63,6 +70,6 @@ player.options.addEventListener("click", function (e) {
 });
 
 numRounds.addEventListener("change", function (e) {
-  console.log(e);
   rounds = parseInt(e.target.value);
+  reset();
 });
