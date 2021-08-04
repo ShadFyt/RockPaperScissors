@@ -27,6 +27,7 @@ const selections = {
     else if (!matchUp) opponent.score.innerText++;
     console.log(playerOption);
     console.log(opponentOption);
+    console.log(selections[playerOption][opponentOption]);
   },
 };
 
@@ -34,6 +35,7 @@ const player = {
   name: "Ryan",
   score: scoreboard.children[0],
   options: document.querySelector("#options"),
+  playerChoice: document.querySelector("#playerChoice"),
 };
 
 const opponent = {
@@ -41,6 +43,7 @@ const opponent = {
   score: scoreboard.children[1],
   options: ["rock", "paper", "scissor"],
   option: "",
+  opponentChoice: document.querySelector("#opponentChoice"),
   choice: function () {
     let randNum = Math.floor(Math.random() * 3);
     this.option = this.options[randNum];
@@ -56,7 +59,10 @@ function reset() {
 
 player.options.addEventListener("click", function (e) {
   if (e.target.id != "options") {
+    console.log(e.target.id);
     opponent.choice();
+    player.playerChoice.innerText = e.target.id;
+    opponent.opponentChoice.innerText = opponent.option;
     selections.compare(e.target.id, opponent.option);
     if (
       parseInt(player.score.innerText) === rounds ||
